@@ -24,7 +24,8 @@ object HealthTracker {
  // # df = sqlContext.read.csv(SparkFiles.get("adult.csv"), header=True, inferSchema= True)
  //  df = spark.read.json(SparkFiles.get("rows.json"), header=True, inferSchema= True)
 //val df = spark.read.json("src/main/resources/rows.json")
-
+//  df.select($"name",explode($"columns"),explode($"top"))
+//  array of array then use flatten($"columns")
     val healthTrackDf = spark.read.json(SparkFiles.get("rows.json"))
 
     //removes incomplete rows

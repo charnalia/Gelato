@@ -18,7 +18,7 @@ The database can be any open source relational database of your choice.
 <h1>daily run cron job of spark submit shell script to automate the run at 1:00 AM </h1>
 
 ./bin/spark-submit \
-  --master spark://207.184.161.138:7077 \
+  --master yarn \
   --deploy-mode cluster
   --conf <key<=<value> \
   --driver-memory 2g \

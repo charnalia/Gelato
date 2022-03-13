@@ -20,10 +20,10 @@ object HealthTracker {
     println("hello")
     spark.sparkContext.addFile("https://data.cdc.gov/api/views/cjae-szjv/rows.json")
   //  # sc.addFile(url)
-    //# sqlContext = SQLContext(sc)
-   // # df = sqlContext.read.csv(SparkFiles.get("adult.csv"), header=True, inferSchema= True)
-  //  df = spark.read.csv(SparkFiles.get("adult.csv"), header=True, inferSchema= True)
-
+  //# sqlContext = SQLContext(sc)
+ // # df = sqlContext.read.csv(SparkFiles.get("adult.csv"), header=True, inferSchema= True)
+ //  df = spark.read.json(SparkFiles.get("rows.json"), header=True, inferSchema= True)
+//val df = spark.read.json("src/main/resources/rows.json")
 
     val healthTrackDf = spark.read.json(SparkFiles.get("rows.json"))
 
